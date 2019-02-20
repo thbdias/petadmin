@@ -24,3 +24,5 @@ docker-compose run --rm app bundle exec rails g fae:scaffold Supplier name:strin
 docker-compose run --rm app bundle exec rails g fae:scaffold Sell total:decimal discount:references client:references observations:text status:integer date:date
 
 docker-compose run --rm app bundle exec rake db:migrate
+
+docker-compose run --rm app bundle exec rake fae:seed_db
