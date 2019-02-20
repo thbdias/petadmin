@@ -14,3 +14,13 @@ docker-compose run --rm app bundle exec rake db:create
 docker-compose up --build
 docker-compose up 
 docker-compose run --rm app bundle exec rails g fae:install
+
+docker-compose run --rm app bundle exec rails g fae:scaffold Client name:string email:string observations:text phone:string
+docker-compose run --rm app bundle exec rails g fae:scaffold Product title:string description:string hero_image:image price:decimal observations:text supplier:references
+docker-compose run --rm app bundle exec rails g fae:scaffold Service title:string description:text price:integer hero_image:image observations:text
+docker-compose run --rm app bundle exec rails g fae:scaffold Discount title:string value:decimal
+docker-compose run --rm app bundle exec rails g fae:scaffold Campaign title:string body:text
+docker-compose run --rm app bundle exec rails g fae:scaffold Supplier name:string observations:text email:string phone:string
+docker-compose run --rm app bundle exec rails g fae:scaffold Sell total:decimal discount:references client:references observations:text status:integer date:date
+
+docker-compose run --rm app bundle exec rake db:migrate
