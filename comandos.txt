@@ -11,4 +11,5 @@ docker run -it --rm --user "$(id -u):$(id -g)" -v "$PWD":/usr/src/app -w /usr/sr
 docker-compose build
 docker-compose run --rm app bundle install
 docker-compose run --rm app bundle exec rake db:create
-
+docker-compose up --build
+docker-compose up 
