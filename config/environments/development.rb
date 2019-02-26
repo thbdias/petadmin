@@ -58,7 +58,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   
-  
-  # config.logger = ActiveSupport::Logger.new(STDOUT)
+  # Log Docker - container
+  config.logger = ActiveSupport::Logger.new(STDOUT)
   
 end
