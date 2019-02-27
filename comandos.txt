@@ -26,3 +26,7 @@ docker-compose run --rm app bundle exec rails g fae:scaffold Sell total:decimal 
 docker-compose run --rm app bundle exec rake db:migrate
 
 docker-compose run --rm app bundle exec rake fae:seed_db
+
+docker-compose run --rm app bundle exec rails g model sell_product product:references sell:references
+docker-compose run --rm app bundle exec rails g model sell_service service:references sell:references
+docker-compose run --rm app bundle exec rails g model campaign_clients campaign:references client:references
