@@ -1,13 +1,14 @@
 class Sell < ApplicationRecord
   include Fae::BaseModelConcern
-  enum status: {finished: 0, canceled: 1}
+  # enum status: {finished: 0, canceled: 1}
+  enum status: {finalizada: 0, cancelada: 1}
 
   validates :client, presence: true
 
-  has_many :sell_products
+  has_many :sell_products, dependent: :destroy
   has_many :products, through: :sell_products
   
-  has_many :sell_services
+  has_many :sell_services, dependent: :destroy
   has_many :services, through: :sell_services
 
   belongs_to :discount

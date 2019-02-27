@@ -30,3 +30,5 @@ docker-compose run --rm app bundle exec rake fae:seed_db
 docker-compose run --rm app bundle exec rails g model sell_product product:references sell:references
 docker-compose run --rm app bundle exec rails g model sell_service service:references sell:references
 docker-compose run --rm app bundle exec rails g model campaign_clients campaign:references client:references
+
+docker-compose run --rm app bundle exec rails g mailer Marketing campaign
