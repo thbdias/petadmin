@@ -4,7 +4,8 @@ Rails.application.configure do
   # configurando o action_mails do rails 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' } # local onde o site está no momento
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = { :address => 'mailcatcher', :port => 1025 } # mailcatcher: nome dentro do container
+  # config.action_mailer.smtp_settings = { :address => 'mailcatcher', :port => 1025 } # mailcatcher: nome dentro do container
+  config.action_mailer.smtp_settings = { :address => 'mailcatcher', :port => 25 } # mailcatcher: nome dentro do container
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

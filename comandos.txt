@@ -32,3 +32,5 @@ docker-compose run --rm app bundle exec rails g model sell_service service:refer
 docker-compose run --rm app bundle exec rails g model campaign_clients campaign:references client:references
 
 docker-compose run --rm app bundle exec rails g mailer Marketing campaign
+
+docker-compose run --rm app bundle exec rails g job Campaing
